@@ -15,25 +15,32 @@
 psg8259@yu.ac.kr
 </p>
 
-<h2 align="center"> Revision history </h2>
+<h2 align="left"> Revision history </h2>
 
 | Revision date | Version # | Description | Author |
 | :---: | :---: | :---: | :---: |
 | 27/03/2026 | 0.01 | First Documentation | Seonggeun Park |
 
 <br><br><br>
-<h2 align="center"> Contents </h2>
+<h2 align="left"> Contents </h2>
 
-1. Business purpose ......................................................
-2. System context diagram ......................................................
-3. Use case list ......................................................
-4. Concept of operation ......................................................
-5. Problem statement ......................................................
-6. Glossary ......................................................
-7. References ......................................................
+1. Business purpose 
+___
+2. System context diagram
+___
+3. Use case list 
+______
+4. Concept of operation 
+___
+5. Problem statement 
+___
+6. Glossary 
+___
+7. References 
+___
 
 <br><br><br>
-### 1. Bussiness purpose
+## 1. Bussiness purpose
 
 밤하늘에는 수많은 별과 별자리들이 존재하지만 일반 사람들이 이를 직접 구분하거나 식별하는 것은 쉽지 않다. 실제로 밤하늘을 보면서 어떤 별자리가 있는지 확인하기 위해서는 전문적인 지식이나 별자리 지도와 같은 추가적인 자료가 필요하다.
 이러한 문제를 해결하기 위해 본 프로젝트에서는 밤하늘 이미지를 분석하여 별자리를 식별하고 관련 정보를 제공하는 시스템을 개발하고자 한다. 사용자가 밤하늘 사진을 업로드하면 시스템이 이미지 속 별의 패턴을 분석하여 해당 별자리를 인식하고, 그 별자리에 대한 기본적인 설명과 정보를 제공하도록 설계한다. 이를 통해 사용자는 복잡한 천문학 지식 없이도 간단한 사진 촬영만으로 별자리를 확인할 수 있게 된다.
@@ -42,9 +49,9 @@ psg8259@yu.ac.kr
 
 <br><br><br>
 
-### 2. System context diagram
+## 2. System context diagram
 <p align="center">
-<img src ="diagram.png" alt="System context diagram" width="300"/>
+<img src ="diagram.png" alt="System context diagram" width="400"/>
 </p> 
 
 - Login -- 로그인
@@ -61,7 +68,7 @@ psg8259@yu.ac.kr
 
 <br><br><br>
 
-### 3. Use case list
+## 3. Use case list
 
 
 ### 1) Login
@@ -121,7 +128,7 @@ psg8259@yu.ac.kr
 
 <br><br><br>
 
-### 4. Concept of operation
+## 4. Concept of operation
 
 ### 1) Login
 | 항목 | 내용 |
@@ -189,7 +196,7 @@ psg8259@yu.ac.kr
 
 <br><br><br>
 
-### 5. Problem statement
+## 5. Problem statement
 
 ### Problem #1 – Technical difficulties in using Image Recognition API/Library
 이미지 분석 및 별자리 식별을 위한 외부 라이브러리나 API를 사용해본 경험이 부족하다. 정확한 식별을 위해 OpenCV나 TensorFlow 라이브러리를 학습하여 앱에 적용할 것이다.
@@ -205,7 +212,7 @@ psg8259@yu.ac.kr
 
 ---
 
-### NFRs (Non-Functional Requirements)
+### NFRs (Non Functional Requirements)
 **성능**: 사용자가 사진을 업로드한 후 별자리 분석 결과가 출력되기까지의 시간은 최대 5초 이내로 한다.<br>
 **가용성**: 별자리 데이터베이스와 정보 조회 서비스는 24시간 언제 어디서든 접근 가능해야 한다.<br>
 **사용성**: 천문학 지식이 없는 일반 사용자와 학생들을 위해 직관적이고 단순한 UI/UX를 제공한다.<br>
@@ -214,22 +221,20 @@ psg8259@yu.ac.kr
 
 <br><br><br>
 
-### 6. Glossary
+## 6. Glossary
 
 | Term | Description |
 | :--- | :--- |
-| **Constellation App** | 사용자가 밤하늘 사진을 찍어 별자리를 식별하고 정보를 얻을 수 있는 앱 |
 | **별자리 (Constellation)** | 밤하늘의 별들을 연결하여 신화나 동물 등의 모양을 이름 붙인 것 |
 | **패턴 분석 (Pattern Analysis)** | 이미지 내 별들의 위치와 밝기 관계를 계산하여 특정 형상을 찾아내는 기술 |
 | **성표 (Star Catalog)** | 별들의 위치, 밝기, 고유 번호 등을 기록해 둔 천문 데이터베이스 |
 | **이미지 전처리 (Preprocessing)** | 분석 정확도를 높이기 위해 사진의 노이즈를 제거하고 대조를 조절하는 과정 |
-| **오버레이 (Overlay)** | 사용자가 촬영한 사진 위에 별자리 선이나 이름을 겹쳐서 표시하는 방식 |
 | **서버 (Server)** | 회원 정보, 별자리 데이터 및 분석 알고리즘을 저장하고 처리하는 곳 |
 | **GPS** | 위도, 경도 값을 통해 사용자의 현재 관측 위치를 파악하는 시스템 |
 
 <br><br><br>
 
-### 7. References
+## 7. References
 
 ### 1) Yale Bright Star Catalog (천문 데이터베이스)
 [http://tdc-www.harvard.edu/catalogs/bsc5.html](http://tdc-www.harvard.edu/catalogs/bsc5.html)
